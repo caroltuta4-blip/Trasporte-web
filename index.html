@@ -25,5 +25,127 @@
                     <li class="nav-item"><a class="nav-link" href="#tarifas">Tarifas y Puntos</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-warning text-dark ms-lg-3 px-3" href="#contacto">Reportar Bus</a></li>
                 </ul>
+
+
+    <header id="inicio" class="hero">
+        <h1>Tu ruta en tiempo real, sin complicaciones</h1>
+        <p>La plataforma informativa de transporte público colaborativo para conectar paraderos, horarios exactos y rutas locales en tu ciudad.</p>
+        <a href="#rutas" class="btn-primary">Consultar Rutas</a>
+        <a href="#contacto" class="btn-secondary">Enviar Reporte</a>
+    </header>
+
+    <!-- SECCIÓN 1: RUTAS -->
+    <section id="rutas" class="seccion">
+        <div class="titulo-seccion">
+            <h2>Rutas Principales y Cobertura</h2>
+            <p>Encuentra los trayectos más frecuentados e información de frecuencias.</p>
+        </div>
+
+        <div class="grid-tarjetas">
+            <div class="card">
+                <span class="badge">Ruta 101</span>
+                <h3>Centro - Zona Universitaria</h3>
+                <p>Conecta el centro de la ciudad con los principales campus académicos.</p>
+                <small>⏱ Frecuencia: Cada 10 min | 📍 18 Paraderos</small>
+            </div>
+
+            <div class="card">
+                <span class="badge badge-verde">Ruta 205</span>
+                <h3>Norte - Zona Hospitalaria</h3>
+                <p>Trayecto directo conectando los barrios del norte con los centros de salud.</p>
+                <small>⏱ Frecuencia: Cada 15 min | 📍 22 Paraderos</small>
+            </div>
+
+            <div class="card">
+                <span class="badge badge-amarillo">Express 300</span>
+                <h3>Terminal - Zona Comercial</h3>
+                <p>Ruta rápida con paradas limitadas para conexiones directas.</p>
+                <small>⏱ Frecuencia: Cada 8 min | 📍 8 Paraderos</small>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN 2: INNOVACIÓN -->
+    <section id="innovacion" class="seccion">
+        <div class="titulo-seccion">
+            <h2>¿Por qué RutApp es Diferente?</h2>
+            <p>Superamos las limitaciones de las aplicaciones de transporte tradicionales.</p>
+        </div>
+
+        <div class="grid-tarjetas">
+            <div class="card">
+                <h3>👥 Reporte Colaborativo</h3>
+                <p>Información impulsada por los usuarios para estimar el paso del bus sin necesidad de GPS oficial.</p>
+            </div>
+
+            <div class="card">
+                <h3>📶 Modo Bajo Consumo</h3>
+                <p>Diseñada para funcionar con datos lentos y guardar horarios para consultar sin internet.</p>
+            </div>
+
+            <div class="card">
+                <h3>♿ Enfoque Incluyente</h3>
+                <p>Filtros para identificar buses con rampa de acceso y paraderos adecuados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 3: TARIFAS Y PUNTOS DE RECARGA -->
+    <section id="tarifas" class="seccion">
+        <div class="contenedor-dos-columnas">
+            <div class="columna">
+                <h2>Tarifas Claras</h2>
+                <p>Conoce los costos vigentes del transporte local:</p>
+                <ul class="lista-tarifas">
+                    <li>Pasaje Normal (Urbano) <span class="precio">$2.500</span></li>
+                    <li>Tarifa Estudiantil <span class="precio">$1.800</span></li>
+                    <li>Dominicales y Festivos <span class="precio">$2.800</span></li>
+                </ul>
+            </div>
+
+            <div class="columna">
+                <h2>📍 Puntos de Recarga</h2>
+                <p>Ubica los módulos autorizados para saldo de tu tarjeta:</p>
+                <hr>
+                <p><strong>Estación Central de Buses</strong><br><small>Atención: 6:00 AM - 8:00 PM</small></p>
+                <p><strong>Punto Autorizado - Parque Principal</strong><br><small>Atención: 7:00 AM - 7:00 PM</small></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 4: FORMULARIO -->
+    <section id="contacto" class="seccion">
+        <div class="form-card">
+            <h2 style="text-align: center;">Reportar un Estado de Ruta</h2>
+            <p style="text-align: center; color: #666; font-size: 14px;">¿Tuviste un retraso? Notifica a la comunidad.</p>
+
+            <form>
+                <div class="campo">
+                    <label for="nombre">Tu Nombre</label>
+                    <input type="text" id="nombre" placeholder="Ej. Carlos Mendoza" required>
+                </div>
+
+                <div class="campo">
+                    <label for="ruta">Selecciona la Ruta</label>
+                    <select id="ruta" required>
+                        <option value="" selected disabled>Selecciona una opción...</option>
+                        <option value="1">Ruta 101 - Centro / Universitaria</option>
+                        <option value="2">Ruta 205 - Norte / Hospital</option>
+                        <option value="3">Ruta Express 300 - Terminal</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Detalles Adicionales</label>
+                    <textarea id="mensaje" rows="3" placeholder="Ej. El bus de las 7:30 AM no pasó..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Reporte</button>
+            </form>
+        </div>
+    </section>
+
+    
 </body>
+
+  
 </html>
