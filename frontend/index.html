@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RutApp - Movilidad Urbana Inteligente</title>
-
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-   
     <nav class="navbar">
         <a class="logo" href="#">🚌 RutApp</a>
         <ul class="nav-links">
@@ -19,6 +17,7 @@
             <li><a href="#rutas">Rutas</a></li>
             <li><a href="#innovacion">Innovación</a></li>
             <li><a href="#tarifas">Tarifas</a></li>
+            <li><a href="#auth-section">Acceso</a></li>
             <li><a href="#contacto" class="btn-reportar">Reportar Bus</a></li>
         </ul>
     </nav>
@@ -30,13 +29,60 @@
         <a href="#contacto" class="btn-secondary">Enviar Reporte</a>
     </header>
 
+    <!-- SECCIÓN DE AUTENTICACIÓN (LOGIN Y REGISTRO) -->
+    <section id="auth-section" class="seccion">
+        <div class="titulo-seccion">
+            <h2>Acceso a RutApp</h2>
+            <p>Inicia sesión o regístrate para acceder a las funciones avanzadas.</p>
+        </div>
+
+        <div class="contenedor-dos-columnas">
+            <!-- Formulario de Login -->
+            <div class="columna">
+                <h2>Iniciar Sesión</h2>
+                <form id="form-login">
+                    <div class="campo">
+                        <label for="login-email">Correo Electrónico</label>
+                        <input type="email" id="login-email" placeholder="usuario@correo.com" required>
+                    </div>
+                    <div class="campo">
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" placeholder="******" required>
+                    </div>
+                    <button type="submit" class="btn-enviar">Ingresar</button>
+                </form>
+            </div>
+
+            <!-- Formulario de Registro -->
+            <div class="columna">
+                <h2>Crear Cuenta</h2>
+                <form id="form-registro">
+                    <div class="campo">
+                        <label for="reg-nombre">Nombre Completo</label>
+                        <input type="text" id="reg-nombre" placeholder="Ej. Carol Tuta" required>
+                    </div>
+                    <div class="campo">
+                        <label for="reg-email">Correo Electrónico</label>
+                        <input type="email" id="reg-email" placeholder="usuario@correo.com" required>
+                    </div>
+                    <div class="campo">
+                        <label for="reg-password">Contraseña</label>
+                        <input type="password" id="reg-password" placeholder="Mínimo 6 caracteres" required>
+                    </div>
+                    <button type="submit" class="btn-enviar" style="background-color: #198754;">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN RUTAS -->
     <section id="rutas" class="seccion">
         <div class="titulo-seccion">
             <h2>Rutas Principales y Cobertura</h2>
             <p>Encuentra los trayectos más frecuentados e información de frecuencias.</p>
         </div>
 
-        <div class="grid-tarjetas">
+        <div class="grid-tarjetas" id="contenedor-rutas">
             <div class="card">
                 <span class="badge">Ruta 101</span>
                 <h3>Centro - Zona Universitaria</h3>
@@ -60,6 +106,7 @@
         </div>
     </section>
     
+    <!-- SECCIÓN INNOVACIÓN -->
     <section id="innovacion" class="seccion">
         <div class="titulo-seccion">
             <h2>¿Por qué RutApp es Diferente?</h2>
@@ -84,7 +131,7 @@
         </div>
     </section>
 
-  
+    
     <section id="tarifas" class="seccion">
         <div class="contenedor-dos-columnas">
             <div class="columna">
@@ -107,12 +154,13 @@
         </div>
     </section>
 
+    <!-- SECCIÓN REPORTAR -->
     <section id="contacto" class="seccion">
         <div class="form-card">
             <h2 style="text-align: center;">Reportar un Estado de Ruta</h2>
             <p style="text-align: center; color: #666; font-size: 14px;">¿Tuviste un retraso? Notifica a la comunidad.</p>
 
-            <form>
+            <form id="form-reporte">
                 <div class="campo">
                     <label for="nombre">Tu Nombre</label>
                     <input type="text" id="nombre" placeholder="Ej. Carlos Mendoza" required>
@@ -122,9 +170,9 @@
                     <label for="ruta">Selecciona la Ruta</label>
                     <select id="ruta" required>
                         <option value="" selected disabled>Selecciona una opción...</option>
-                        <option value="1">Ruta 101 - Centro / Universitaria</option>
-                        <option value="2">Ruta 205 - Norte / Hospital</option>
-                        <option value="3">Ruta Express 300 - Terminal</option>
+                        <option value="Ruta 101">Ruta 101 - Centro / Universitaria</option>
+                        <option value="Ruta 205">Ruta 205 - Norte / Hospital</option>
+                        <option value="Express 300">Ruta Express 300 - Terminal</option>
                     </select>
                 </div>
 
@@ -137,13 +185,14 @@
             </form>
         </div>
     </section>
+
     <footer>
         <p>© 2026 RutApp - Innovación en Transporte Urbano.</p>
         <small>Proyecto Académico de Emprendimiento Digital</small>
     </footer>
 
-    
+   
+    <script src="app.js"></script>
 </body>
 
-  
 </html>
